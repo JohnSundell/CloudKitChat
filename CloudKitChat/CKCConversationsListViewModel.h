@@ -17,7 +17,7 @@
 - (CKCConversation *)conversationAtIndex:(NSUInteger)index;
 
 /// Add a conversation with a user
-- (CKCConversation *)addConversationWithUser:(CKCUser *)user;
+- (void)addConversationWithUser:(CKCUser *)user completionHandler:(void(^)(CKCConversation *conversation))completionHandler;
 
 /// Delete the conversation at a certain index
 - (void)deleteConversationAtIndex:(NSUInteger)index completionHandler:(void(^)(BOOL success))completionHandler;

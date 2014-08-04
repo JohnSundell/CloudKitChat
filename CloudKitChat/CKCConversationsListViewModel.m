@@ -58,16 +58,14 @@
     return [self.conversations objectAtIndex:index];
 }
 
-- (CKCConversation *)addConversationWithUser:(CKCUser *)user
+- (void)addConversationWithUser:(CKCUser *)user completionHandler:(void (^)(CKCConversation *))completionHandler
 {
     CKCConversation *conversation = [[CKCConversation alloc] initWithIdentifier:nil
                                                                       localUser:self.localUser
                                                                      remoteUser:user
                                                                        messages:nil];
     
-    [self.conversations insertObject:conversation atIndex:0];
-    
-    return conversation;
+    [self.modelLoader saveConversation:conversation completionHandler:completionHandler];
 }
 
 - (void)deleteConversationAtIndex:(NSUInteger)index completionHandler:(void (^)(BOOL))completionHandler

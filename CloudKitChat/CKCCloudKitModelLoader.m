@@ -141,6 +141,23 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     }];
 }
 
+- (void)saveConversation:(CKCConversation *)conversation completionHandler:(void (^)(CKCConversation *))completionHandler
+{
+    CKRecord *record = [conversation cloudKitRecord];
+    
+    [self.database saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+        if (error) {
+            // Error handling
+        } else {
+            CKCConversation *savedConversation = [[CKCConversation alloc] initWithCloudKitRecord:record
+                                                                                       localUser:conversation.localUser
+                                                                                      remoteUser:conversation.remoteUser
+                                                                                        messages:conversation.messages];
+            completionHandler(savedConversation);
+        }
+    }];
+}
+
 - (void)loadMessagesForConversation:(CKCConversation *)conversation completionHandler:(void (^)(NSArray *))completionHandler
 {
     NSString *predicateFormat = [CKCMessageConversationKey stringByAppendingString:@" = %@"];

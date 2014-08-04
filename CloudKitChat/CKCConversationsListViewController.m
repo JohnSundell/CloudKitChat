@@ -103,10 +103,13 @@
 
 - (void)userSearchViewController:(CKCUserSearchViewController *)viewController didSelectUser:(CKCUser *)user
 {
-    CKCConversation *newConversation = [self.viewModel addConversationWithUser:user];
-    UIViewController *conversationVC = [self.viewControllerFactory conversationViewControllerForConversation:newConversation];
+    __weak typeof(self) _self = self;
     
-    [self.navigationController pushViewController:conversationVC animated:YES];
+    [self.viewModel addConversationWithUser:user completionHandler:^(CKCConversation *conversation) {
+        UIViewController *conversationVC = [_self.viewControllerFactory conversationViewControllerForConversation:conversation];
+        
+        [_self.navigationController pushViewController:conversationVC animated:YES];
+    }];
 }
 
 @end

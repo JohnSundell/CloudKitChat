@@ -22,6 +22,9 @@
 /// Load all conversations for the local user
 - (void)loadConversationsForLocalUser:(CKCUser *)localUser completionHandler:(void(^)(NSArray *conversations))completionHandler;
 
+/// Save a conversation
+- (void)saveConversation:(CKCConversation *)conversation completionHandler:(void(^)(CKCConversation *savedConversation))completionHandler;
+
 /// Load all messages for a certain conversation
 - (void)loadMessagesForConversation:(CKCConversation *)conversation completionHandler:(void(^)(NSArray *messages))completionHandler;
 

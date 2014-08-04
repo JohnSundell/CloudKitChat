@@ -57,6 +57,11 @@
     completionHandler(conversations);
 }
 
+- (void)saveConversation:(CKCConversation *)conversation completionHandler:(void (^)(CKCConversation *))completionHandler
+{
+    completionHandler(conversation);
+}
+
 - (void)loadMessagesForConversation:(CKCConversation *)conversation completionHandler:(void (^)(NSArray *))completionHandler
 {
     completionHandler(nil);

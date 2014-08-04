@@ -5,10 +5,24 @@ NSString * const CKCConversationUsersKey = @"users";
 
 @implementation CKCConversation (CKCRecord)
 
-- (CKRecord *)cloudKitRecord
+- (instancetype)initWithCloudKitRecord:(CKRecord *)cloudKitRecord localUser:(CKCUser *)localUser remoteUser:(CKCUser *)remoteUser messages:(NSArray *)messages
 {
-    CKRecord *record = [[CKRecord alloc] initWithRecordType:[CKCConversation type]
-                                                   recordID:self.identifier];
+    return [self initWithIdentifier:cloudKitRecord.recordID
+                          localUser:localUser
+                         remoteUser:remoteUser
+                           messages:messages];
+}
+
+- (CKRecord *)cloudKitRecord
+{    
+    CKRecord *record;
+    
+    if (self.identifier) {
+        record = [[CKRecord alloc] initWithRecordType:[CKCConversation type]
+                                             recordID:self.identifier];
+    } else {
+        record = [[CKRecord alloc] initWithRecordType:[CKCConversation type]];
+    }
     
     CKReference *localUserReference = [[CKReference alloc] initWithRecordID:self.localUser.identifier action:CKReferenceActionDeleteSelf];
     CKReference *remoteUserReference = [[CKReference alloc] initWithRecordID:self.remoteUser.identifier action:CKReferenceActionDeleteSelf];

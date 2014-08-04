@@ -24,6 +24,11 @@ extern NSString * const CKCConversationUsersKey;
 /// Category that makes CKCConversation conform to the CKCRecord protocol
 @interface CKCConversation (CKCRecord) <CKCRecord>
 
+- (instancetype)initWithCloudKitRecord:(CKRecord *)cloudKitRecord
+                             localUser:(CKCUser *)localUser
+                            remoteUser:(CKCUser *)remoteUser
+                              messages:(NSArray *)messages;
+
 @end
 
 extern NSString * const CKCMessageConversationKey;
