@@ -38,7 +38,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (conversations) {
                 _self.conversations = [conversations mutableCopy];
-                [_self.delegate viewModelDidLoad:self];
+                [_self.delegate viewModelDidLoad:_self];
             } else {
                 // Smart error handling
             }
