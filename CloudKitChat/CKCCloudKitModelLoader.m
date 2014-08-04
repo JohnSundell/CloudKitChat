@@ -8,8 +8,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
 
 @interface CKCCloudKitModelLoader ()
 
-@property (nonatomic, strong) CKDatabase *publicDatabase;
-@property (nonatomic, strong) CKDatabase *privateDatabase;
+@property (nonatomic, strong) CKDatabase *database;
 
 @end
 
@@ -22,9 +21,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     }
     
     CKContainer *container = [CKContainer defaultContainer];
-    
-    _publicDatabase = [container publicCloudDatabase];
-    _privateDatabase = [container privateCloudDatabase];
+    _database = [container publicCloudDatabase];
     
     return self;
 }
@@ -66,7 +63,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     
     CKRecordID *localUserRecordID = [NSKeyedUnarchiver unarchiveObjectWithData:localUserRecordData];
     
-    [self.publicDatabase fetchRecordWithID:localUserRecordID completionHandler:^(CKRecord *record, NSError *error) {
+    [self.database fetchRecordWithID:localUserRecordID completionHandler:^(CKRecord *record, NSError *error) {
         if (error) {
             // Smart error handling
             completionHandler(nil);
@@ -83,7 +80,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     CKCUser *user = [[CKCUser alloc] initWithIdentifier:nil name:name profilePicture:profilePicture];
     CKRecord *record = [user cloudKitRecord];
     
-    [self.publicDatabase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+    [self.database saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
         if (error) {
             // Smart error handling
             completionHandler(nil);
@@ -108,7 +105,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     
     __weak typeof(self) _self = self;
     
-    [self.publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
+    [self.database performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
         NSMutableArray *remoteUserRecordIDs = [NSMutableArray new];
         
         // Gather all remote user record IDs from reference to be able to perform lookup
@@ -140,7 +137,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
             completionHandler(conversations);
         };
         
-        [_self.publicDatabase addOperation:operation];
+        [_self.database addOperation:operation];
     }];
 }
 
@@ -151,7 +148,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, conversationReference];
     CKQuery *query = [[CKQuery alloc] initWithRecordType:[CKCMessage type] predicate:predicate];
     
-    [self.publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
+    [self.database performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
         NSMutableArray *messages = [NSMutableArray new];
         
         for (CKRecord *record in results) {
@@ -167,7 +164,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
 {
     CKRecord *record = [message cloudKitRecord];
     
-    [self.publicDatabase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+    [self.database saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
         completionHandler(!error);
     }];
 }
@@ -178,7 +175,7 @@ static NSString * const CKCLocalUserRecordIDKey = @"localUserRecordID";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchString];
     CKQuery *query = [[CKQuery alloc] initWithRecordType:[CKCUser type] predicate:predicate];
     
-    [self.publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
+    [self.database performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
         NSMutableArray *users = [NSMutableArray new];
         
         for (CKRecord *record in results) {
