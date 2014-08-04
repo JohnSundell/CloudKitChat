@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		520CF053198E685200A177D9 /* CKCRecords.m in Sources */ = {isa = PBXBuildFile; fileRef = 520CF052198E685200A177D9 /* CKCRecords.m */; };
+		520CF05A198E71F500A177D9 /* CKCCloudKitModelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 520CF059198E71F500A177D9 /* CKCCloudKitModelLoader.m */; };
+		5295099B198D4C4A00619F20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5295099A198D4C4A00619F20 /* main.m */; };
+		5295099E198D4C4A00619F20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5295099D198D4C4A00619F20 /* AppDelegate.m */; };
+		529509A0198D4C4A00619F20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5295099F198D4C4A00619F20 /* Images.xcassets */; };
+		529509AC198D4C4A00619F20 /* CloudKitChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 529509AB198D4C4A00619F20 /* CloudKitChatTests.m */; };
+		52DB9D35198D4CC600F6D31F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DB9D34198D4CC600F6D31F /* CloudKit.framework */; };
+		52DB9D38198D4D2200F6D31F /* CKCConversationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D37198D4D2200F6D31F /* CKCConversationsListViewController.m */; };
+		52DB9D41198D51A700F6D31F /* CKCConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D40198D51A700F6D31F /* CKCConversation.m */; };
+		52DB9D44198D51E300F6D31F /* CKCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D43198D51E300F6D31F /* CKCMessage.m */; };
+		52DB9D47198D51F500F6D31F /* CKCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D46198D51F500F6D31F /* CKCUser.m */; };
+		52DB9D4C198D566000F6D31F /* CKCConversationsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D4B198D566000F6D31F /* CKCConversationsListViewModel.m */; };
+		52DB9D52198D59B100F6D31F /* CKCViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D51198D59B100F6D31F /* CKCViewControllerFactory.m */; };
+		52DB9D57198D5EA400F6D31F /* CKCConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D56198D5EA400F6D31F /* CKCConversationViewController.m */; };
+		52DB9D5C198D5F0E00F6D31F /* CKCConversationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D5B198D5F0E00F6D31F /* CKCConversationViewModel.m */; };
+		52DB9D5F198D687600F6D31F /* CKCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D5E198D687600F6D31F /* CKCTableViewController.m */; };
+		52DB9D63198D6F7700F6D31F /* CKCMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D62198D6F7700F6D31F /* CKCMessageTableViewCell.m */; };
+		52DB9D66198D821700F6D31F /* CKCUserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D65198D821700F6D31F /* CKCUserSearchViewController.m */; };
+		52DB9D6A198D824300F6D31F /* CKCUserSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D69198D824300F6D31F /* CKCUserSearchViewModel.m */; };
+		52DB9D78198D921400F6D31F /* CKCMockModelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D77198D921400F6D31F /* CKCMockModelLoader.m */; };
+		52DB9D7B198D92A600F6D31F /* CKCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB9D7A198D92A600F6D31F /* CKCLoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		529509A6198D4C4A00619F20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5295098D198D4C4A00619F20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52950994198D4C4A00619F20;
+			remoteInfo = CloudKitChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		520CF051198E685200A177D9 /* CKCRecords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCRecords.h; sourceTree = "<group>"; };
+		520CF052198E685200A177D9 /* CKCRecords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCRecords.m; sourceTree = "<group>"; };
+		520CF054198E6B9B00A177D9 /* CKCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKCModel.h; sourceTree = "<group>"; };
+		520CF058198E71F500A177D9 /* CKCCloudKitModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCCloudKitModelLoader.h; sourceTree = "<group>"; };
+		520CF059198E71F500A177D9 /* CKCCloudKitModelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCCloudKitModelLoader.m; sourceTree = "<group>"; };
+		520CF05B198E72EB00A177D9 /* BuildSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildSettings.h; sourceTree = "<group>"; };
+		52950995198D4C4A00619F20 /* CloudKitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52950999198D4C4A00619F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5295099A198D4C4A00619F20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5295099C198D4C4A00619F20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5295099D198D4C4A00619F20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5295099F198D4C4A00619F20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		529509A5198D4C4A00619F20 /* CloudKitChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudKitChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		529509AA198D4C4A00619F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529509AB198D4C4A00619F20 /* CloudKitChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudKitChatTests.m; sourceTree = "<group>"; };
+		52DB9D33198D4CC400F6D31F /* CloudKitChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CloudKitChat.entitlements; sourceTree = "<group>"; };
+		52DB9D34198D4CC600F6D31F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		52DB9D36198D4D2200F6D31F /* CKCConversationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCConversationsListViewController.h; sourceTree = "<group>"; };
+		52DB9D37198D4D2200F6D31F /* CKCConversationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCConversationsListViewController.m; sourceTree = "<group>"; };
+		52DB9D3F198D51A700F6D31F /* CKCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCConversation.h; sourceTree = "<group>"; };
+		52DB9D40198D51A700F6D31F /* CKCConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCConversation.m; sourceTree = "<group>"; };
+		52DB9D42198D51E300F6D31F /* CKCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCMessage.h; sourceTree = "<group>"; };
+		52DB9D43198D51E300F6D31F /* CKCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCMessage.m; sourceTree = "<group>"; };
+		52DB9D45198D51F500F6D31F /* CKCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCUser.h; sourceTree = "<group>"; };
+		52DB9D46198D51F500F6D31F /* CKCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCUser.m; sourceTree = "<group>"; };
+		52DB9D4A198D566000F6D31F /* CKCConversationsListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCConversationsListViewModel.h; sourceTree = "<group>"; };
+		52DB9D4B198D566000F6D31F /* CKCConversationsListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCConversationsListViewModel.m; sourceTree = "<group>"; };
+		52DB9D4F198D573800F6D31F /* CKCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKCViewModel.h; sourceTree = "<group>"; };
+		52DB9D50198D59B100F6D31F /* CKCViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCViewControllerFactory.h; sourceTree = "<group>"; };
+		52DB9D51198D59B100F6D31F /* CKCViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCViewControllerFactory.m; sourceTree = "<group>"; };
+		52DB9D53198D5C8C00F6D31F /* CKCImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKCImage.h; sourceTree = "<group>"; };
+		52DB9D55198D5EA400F6D31F /* CKCConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCConversationViewController.h; sourceTree = "<group>"; };
+		52DB9D56198D5EA400F6D31F /* CKCConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCConversationViewController.m; sourceTree = "<group>"; };
+		52DB9D5A198D5F0E00F6D31F /* CKCConversationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCConversationViewModel.h; sourceTree = "<group>"; };
+		52DB9D5B198D5F0E00F6D31F /* CKCConversationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCConversationViewModel.m; sourceTree = "<group>"; };
+		52DB9D5D198D687600F6D31F /* CKCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCTableViewController.h; sourceTree = "<group>"; };
+		52DB9D5E198D687600F6D31F /* CKCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCTableViewController.m; sourceTree = "<group>"; };
+		52DB9D61198D6F7700F6D31F /* CKCMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCMessageTableViewCell.h; sourceTree = "<group>"; };
+		52DB9D62198D6F7700F6D31F /* CKCMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCMessageTableViewCell.m; sourceTree = "<group>"; };
+		52DB9D64198D821700F6D31F /* CKCUserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCUserSearchViewController.h; sourceTree = "<group>"; };
+		52DB9D65198D821700F6D31F /* CKCUserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCUserSearchViewController.m; sourceTree = "<group>"; };
+		52DB9D68198D824300F6D31F /* CKCUserSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCUserSearchViewModel.h; sourceTree = "<group>"; };
+		52DB9D69198D824300F6D31F /* CKCUserSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCUserSearchViewModel.m; sourceTree = "<group>"; };
+		52DB9D75198D917E00F6D31F /* CKCModelLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKCModelLoader.h; sourceTree = "<group>"; };
+		52DB9D76198D921400F6D31F /* CKCMockModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCMockModelLoader.h; sourceTree = "<group>"; };
+		52DB9D77198D921400F6D31F /* CKCMockModelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCMockModelLoader.m; sourceTree = "<group>"; };
+		52DB9D79198D92A600F6D31F /* CKCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCLoginViewController.h; sourceTree = "<group>"; };
+		52DB9D7A198D92A600F6D31F /* CKCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCLoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52950992198D4C4A00619F20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DB9D35198D4CC600F6D31F /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529509A2198D4C4A00619F20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5295098C198D4C4A00619F20 = {
+			isa = PBXGroup;
+			children = (
+				52950997198D4C4A00619F20 /* CloudKitChat */,
+				529509A8198D4C4A00619F20 /* CloudKitChatTests */,
+				52950996198D4C4A00619F20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52950996198D4C4A00619F20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52950995198D4C4A00619F20 /* CloudKitChat.app */,
+				529509A5198D4C4A00619F20 /* CloudKitChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52950997198D4C4A00619F20 /* CloudKitChat */ = {
+			isa = PBXGroup;
+			children = (
+				5295099C198D4C4A00619F20 /* AppDelegate.h */,
+				5295099D198D4C4A00619F20 /* AppDelegate.m */,
+				520CF05B198E72EB00A177D9 /* BuildSettings.h */,
+				52DB9D3A198D4D5400F6D31F /* ViewControllers */,
+				52DB9D60198D6F5D00F6D31F /* Views */,
+				52DB9D49198D564900F6D31F /* ViewModels */,
+				52DB9D3B198D4DFB00F6D31F /* Models */,
+				52DB9D39198D4D4500F6D31F /* Frameworks */,
+				5295099F198D4C4A00619F20 /* Images.xcassets */,
+				52950998198D4C4A00619F20 /* Supporting Files */,
+			);
+			path = CloudKitChat;
+			sourceTree = "<group>";
+		};
+		52950998198D4C4A00619F20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D33198D4CC400F6D31F /* CloudKitChat.entitlements */,
+				52950999198D4C4A00619F20 /* Info.plist */,
+				5295099A198D4C4A00619F20 /* main.m */,
+				52DB9D53198D5C8C00F6D31F /* CKCImage.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		529509A8198D4C4A00619F20 /* CloudKitChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				529509AB198D4C4A00619F20 /* CloudKitChatTests.m */,
+				529509A9198D4C4A00619F20 /* Supporting Files */,
+			);
+			path = CloudKitChatTests;
+			sourceTree = "<group>";
+		};
+		529509A9198D4C4A00619F20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				529509AA198D4C4A00619F20 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52DB9D39198D4D4500F6D31F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D34198D4CC600F6D31F /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52DB9D3A198D4D5400F6D31F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D6C198D853200F6D31F /* Factory + Base */,
+				52DB9D6D198D855800F6D31F /* Conversations */,
+				52DB9D6E198D856300F6D31F /* UserSearch */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52DB9D3B198D4DFB00F6D31F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D75198D917E00F6D31F /* CKCModelLoader.h */,
+				52DB9D73198D914500F6D31F /* Entities */,
+				52DB9D74198D915E00F6D31F /* Mocks */,
+				52DB9D72198D913400F6D31F /* CloudKit */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		52DB9D49198D564900F6D31F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D4F198D573800F6D31F /* CKCViewModel.h */,
+				52DB9D4A198D566000F6D31F /* CKCConversationsListViewModel.h */,
+				52DB9D4B198D566000F6D31F /* CKCConversationsListViewModel.m */,
+				52DB9D5A198D5F0E00F6D31F /* CKCConversationViewModel.h */,
+				52DB9D5B198D5F0E00F6D31F /* CKCConversationViewModel.m */,
+				52DB9D68198D824300F6D31F /* CKCUserSearchViewModel.h */,
+				52DB9D69198D824300F6D31F /* CKCUserSearchViewModel.m */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		52DB9D60198D6F5D00F6D31F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D61198D6F7700F6D31F /* CKCMessageTableViewCell.h */,
+				52DB9D62198D6F7700F6D31F /* CKCMessageTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		52DB9D6C198D853200F6D31F /* Factory + Base */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D50198D59B100F6D31F /* CKCViewControllerFactory.h */,
+				52DB9D51198D59B100F6D31F /* CKCViewControllerFactory.m */,
+				52DB9D79198D92A600F6D31F /* CKCLoginViewController.h */,
+				52DB9D7A198D92A600F6D31F /* CKCLoginViewController.m */,
+				52DB9D5D198D687600F6D31F /* CKCTableViewController.h */,
+				52DB9D5E198D687600F6D31F /* CKCTableViewController.m */,
+			);
+			name = "Factory + Base";
+			sourceTree = "<group>";
+		};
+		52DB9D6D198D855800F6D31F /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D36198D4D2200F6D31F /* CKCConversationsListViewController.h */,
+				52DB9D37198D4D2200F6D31F /* CKCConversationsListViewController.m */,
+				52DB9D55198D5EA400F6D31F /* CKCConversationViewController.h */,
+				52DB9D56198D5EA400F6D31F /* CKCConversationViewController.m */,
+			);
+			name = Conversations;
+			sourceTree = "<group>";
+		};
+		52DB9D6E198D856300F6D31F /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D64198D821700F6D31F /* CKCUserSearchViewController.h */,
+				52DB9D65198D821700F6D31F /* CKCUserSearchViewController.m */,
+			);
+			name = UserSearch;
+			sourceTree = "<group>";
+		};
+		52DB9D72198D913400F6D31F /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				520CF058198E71F500A177D9 /* CKCCloudKitModelLoader.h */,
+				520CF059198E71F500A177D9 /* CKCCloudKitModelLoader.m */,
+				520CF051198E685200A177D9 /* CKCRecords.h */,
+				520CF052198E685200A177D9 /* CKCRecords.m */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
+		52DB9D73198D914500F6D31F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				520CF054198E6B9B00A177D9 /* CKCModel.h */,
+				52DB9D3F198D51A700F6D31F /* CKCConversation.h */,
+				52DB9D40198D51A700F6D31F /* CKCConversation.m */,
+				52DB9D42198D51E300F6D31F /* CKCMessage.h */,
+				52DB9D43198D51E300F6D31F /* CKCMessage.m */,
+				52DB9D45198D51F500F6D31F /* CKCUser.h */,
+				52DB9D46198D51F500F6D31F /* CKCUser.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		52DB9D74198D915E00F6D31F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				52DB9D76198D921400F6D31F /* CKCMockModelLoader.h */,
+				52DB9D77198D921400F6D31F /* CKCMockModelLoader.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52950994198D4C4A00619F20 /* CloudKitChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529509AF198D4C4A00619F20 /* Build configuration list for PBXNativeTarget "CloudKitChat" */;
+			buildPhases = (
+				52950991198D4C4A00619F20 /* Sources */,
+				52950992198D4C4A00619F20 /* Frameworks */,
+				52950993198D4C4A00619F20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudKitChat;
+			productName = CloudKitChat;
+			productReference = 52950995198D4C4A00619F20 /* CloudKitChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		529509A4198D4C4A00619F20 /* CloudKitChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529509B2198D4C4A00619F20 /* Build configuration list for PBXNativeTarget "CloudKitChatTests" */;
+			buildPhases = (
+				529509A1198D4C4A00619F20 /* Sources */,
+				529509A2198D4C4A00619F20 /* Frameworks */,
+				529509A3198D4C4A00619F20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				529509A7198D4C4A00619F20 /* PBXTargetDependency */,
+			);
+			name = CloudKitChatTests;
+			productName = CloudKitChatTests;
+			productReference = 529509A5198D4C4A00619F20 /* CloudKitChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5295098D198D4C4A00619F20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "John Sundell";
+				TargetAttributes = {
+					52950994198D4C4A00619F20 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = TEE39J9D8F;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					529509A4198D4C4A00619F20 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 52950994198D4C4A00619F20;
+					};
+				};
+			};
+			buildConfigurationList = 52950990198D4C4A00619F20 /* Build configuration list for PBXProject "CloudKitChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5295098C198D4C4A00619F20;
+			productRefGroup = 52950996198D4C4A00619F20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52950994198D4C4A00619F20 /* CloudKitChat */,
+				529509A4198D4C4A00619F20 /* CloudKitChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52950993198D4C4A00619F20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529509A0198D4C4A00619F20 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529509A3198D4C4A00619F20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52950991198D4C4A00619F20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5295099E198D4C4A00619F20 /* AppDelegate.m in Sources */,
+				52DB9D57198D5EA400F6D31F /* CKCConversationViewController.m in Sources */,
+				52DB9D4C198D566000F6D31F /* CKCConversationsListViewModel.m in Sources */,
+				52DB9D38198D4D2200F6D31F /* CKCConversationsListViewController.m in Sources */,
+				52DB9D6A198D824300F6D31F /* CKCUserSearchViewModel.m in Sources */,
+				52DB9D7B198D92A600F6D31F /* CKCLoginViewController.m in Sources */,
+				52DB9D41198D51A700F6D31F /* CKCConversation.m in Sources */,
+				52DB9D5F198D687600F6D31F /* CKCTableViewController.m in Sources */,
+				520CF053198E685200A177D9 /* CKCRecords.m in Sources */,
+				52DB9D52198D59B100F6D31F /* CKCViewControllerFactory.m in Sources */,
+				52DB9D5C198D5F0E00F6D31F /* CKCConversationViewModel.m in Sources */,
+				52DB9D47198D51F500F6D31F /* CKCUser.m in Sources */,
+				5295099B198D4C4A00619F20 /* main.m in Sources */,
+				52DB9D44198D51E300F6D31F /* CKCMessage.m in Sources */,
+				520CF05A198E71F500A177D9 /* CKCCloudKitModelLoader.m in Sources */,
+				52DB9D63198D6F7700F6D31F /* CKCMessageTableViewCell.m in Sources */,
+				52DB9D66198D821700F6D31F /* CKCUserSearchViewController.m in Sources */,
+				52DB9D78198D921400F6D31F /* CKCMockModelLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529509A1198D4C4A00619F20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529509AC198D4C4A00619F20 /* CloudKitChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		529509A7198D4C4A00619F20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52950994198D4C4A00619F20 /* CloudKitChat */;
+			targetProxy = 529509A6198D4C4A00619F20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		529509AD198D4C4A00619F20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		529509AE198D4C4A00619F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		529509B0198D4C4A00619F20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CloudKitChat/CloudKitChat.entitlements;
+				INFOPLIST_FILE = CloudKitChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		529509B1198D4C4A00619F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CloudKitChat/CloudKitChat.entitlements;
+				INFOPLIST_FILE = CloudKitChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		529509B3198D4C4A00619F20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CloudKitChat.app/CloudKitChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CloudKitChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		529509B4198D4C4A00619F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CloudKitChat.app/CloudKitChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CloudKitChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52950990198D4C4A00619F20 /* Build configuration list for PBXProject "CloudKitChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529509AD198D4C4A00619F20 /* Debug */,
+				529509AE198D4C4A00619F20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		529509AF198D4C4A00619F20 /* Build configuration list for PBXNativeTarget "CloudKitChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529509B0198D4C4A00619F20 /* Debug */,
+				529509B1198D4C4A00619F20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		529509B2198D4C4A00619F20 /* Build configuration list for PBXNativeTarget "CloudKitChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529509B3198D4C4A00619F20 /* Debug */,
+				529509B4198D4C4A00619F20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5295098D198D4C4A00619F20 /* Project object */;
+}
