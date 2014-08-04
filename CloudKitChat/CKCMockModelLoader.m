@@ -12,13 +12,13 @@
 
 - (void)loadLocalUserWithCompletionHandler:(void (^)(CKCUser *))completionHandler
 {
-    CKCUser *user = [[CKCUser alloc] initWithIdentifier:nil name:@"John" profilePicture:nil];
+    CKCUser *user = [[CKCUser alloc] initWithIdentifier:@"localUser" name:@"John" profilePicture:nil];
     completionHandler(user);
 }
 
 - (void)saveLocalUserWithName:(NSString *)name profilePicture:(UIImage *)profilePicture completionHandler:(void (^)(CKCUser *))completionHandler
 {
-    CKCUser *user = [[CKCUser alloc] initWithIdentifier:nil name:@"John" profilePicture:nil];
+    CKCUser *user = [[CKCUser alloc] initWithIdentifier:@"localUser" name:@"John" profilePicture:nil];
     completionHandler(user);
 }
 
