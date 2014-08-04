@@ -5,10 +5,13 @@
 @class CKCUser;
 @protocol CKCModelLoader;
 
+/// View model for the Conversation view
 @interface CKCConversationViewModel : NSObject <CKCViewModel>
 
+/// The conversation that this view model is managing
 @property (nonatomic, strong, readonly) CKCConversation *conversation;
 
+/// Initialize an instance of this class with the required data
 - (instancetype)initWithConversation:(CKCConversation *)conversation modelLoader:(id<CKCModelLoader>)modelLoader;
 
 /// Return the message for a certain index
